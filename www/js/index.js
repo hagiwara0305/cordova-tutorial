@@ -44,3 +44,12 @@ var app = {
 };
 
 app.initialize();
+
+// sweetAlert2のテストコード
+$('.app .sweetalert2-test-button').on('touch', function() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: true,
+      });
+});
