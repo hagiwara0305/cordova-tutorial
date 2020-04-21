@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -26,12 +26,12 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -46,10 +46,62 @@ var app = {
 app.initialize();
 
 // sweetAlert2のテストコード
-$('.app .sweetalert2-test-button').on('touch', function() {
+$('.app .sweetalert2-test-button').on('click', function () {
     Swal.fire({
         icon: 'success',
         title: 'Your work has been saved',
         showConfirmButton: true,
-      });
+    });
+});
+
+$(function () {
+
+    var $jsTabs = $('.js-tabs');
+    var $jsTabsLi = $('.js-tabs li');
+
+    var tabsLiLen = $jsTabsLi.length;
+    var tabsLiWid = $jsTabsLi.eq(0).width();
+
+    //タブエリアの横幅指定
+    $jsTabs.css('width', tabsLiWid * tabsLiLen);
+
+});
+
+$(function () {
+    var ACTIVE_SELECTOR = '.nav-tabs li';
+
+    var $jsTabs = $('.js-tabs');
+    var $jsTabsLi = $('.js-tabs li');
+
+    var $scrollContainer = $('.nav-tabs-outer');
+
+    var $hammerObj = new Hammer($('.js-swipe')[0]);
+    var tabsLiLen = $jsTabsLi.length;
+    var tabsLiWid = $jsTabsLi.eq(0).width();
+
+    //タブエリアの横幅指定
+    $jsTabs.css('width', tabsLiWid * tabsLiLen);
+
+    //swipe
+    $hammerObj.on("swipeleft", next);
+    $hammerObj.on("swiperight", prev);
+
+    function next() {
+        tabManager($(ACTIVE_SELECTOR).find('.active').parent().next('li'));
+        console.log('left')
+    }
+    function prev() {
+        tabManager($(ACTIVE_SELECTOR).find('.active').parent().prev('li'));
+        console.log('right');
+    }
+
+    // 指定されたタブをカレントし要素にスクロールする
+    function tabManager($nextTarget) {
+        $nextTarget.find('a').trigger('click');
+
+        if ($nextTarget.index() != -1) {
+            $scrollContainer.scrollLeft($nextTarget.index() * tabsLiWid);
+        }
+    }
+
 });

@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
 
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="libs/sweetalert2/sweetalert2.min.css">
+<head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
 
-        <script type="text/javascript" src="libs/jquery-3.5.0/jquery-3.5.0.min.js"></script>
-        <script type="text/javascript" src="libs/bootstrap-4.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="libs/sweetalert2/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/sweetalert2/sweetalert2.min.css">
+    <style>
+        .nav-tabs-outer {
+            overflow-x: scroll;
+        }
 
-        <title>Hello World</title>
-    </head>
-    <body>
+        .nav-tabs-outer .nav-tabs li {
+            display: block;
+            width: 100px;
+        }
+    </style>
+
+    <script type="text/javascript" src="libs/jquery-3.5.0/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="libs/hammer/hammer.min.js"></script>
+
+    <title>Hello World</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-tabs-outer">
+            <ul class="nav nav-tabs js-tabs">
+                <li class="text-center">
+                    <a class="nav-link active" href="#tab1" data-toggle="tab">TAB1</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab2" data-toggle="tab">TAB2</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab3" data-toggle="tab">TAB3</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab4" data-toggle="tab">TAB4</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab5" data-toggle="tab">TAB5</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab6" data-toggle="tab">TAB6</a>
+                </li>
+                <li class="text-center">
+                    <a class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="js-swipe" style="width: 100%; height: 100%;">
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
@@ -26,9 +69,10 @@
 
             <button class="sweetalert2-test-button">on click!!</button>
         </div>
+    </main>
 
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
 </html>
