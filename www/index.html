@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1/css/bootstrap.min.css">
@@ -42,7 +43,7 @@
                     <a class="nav-link" href="#tab6" data-toggle="tab">TAB6</a>
                 </li>
                 <li class="text-center">
-                    <a class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
+                    <a id="tab7" class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
                 </li>
             </ul>
         </div>
@@ -52,7 +53,7 @@
         <div class="tab-page">
             <p style="margin: 10px;">TAB1</p>
         </div>
-        <div class="app">
+        <div class="app tab1">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -61,10 +62,16 @@
 
             <button class="sweetalert2-test-button">on click!!</button>
         </div>
+
+        <div class="app tab7" style="display: none;">
+            <h1>QRscanner</h1>
+            <button class="qrscan-active">Click!!</button>
+        </div>
     </main>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/qrscanner.js"></script>
 </body>
 
 </html>
