@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function () {
+    initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -26,12 +26,12 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function () {
+    onDeviceReady: function() {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function (id) {
+    receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -46,7 +46,7 @@ var app = {
 app.initialize();
 
 // sweetAlert2のテストコード
-$('.app .sweetalert2-test-button').on('click', function () {
+$('.app .sweetalert2-test-button').on('click', function() {
     Swal.fire({
         icon: 'success',
         title: 'Your work has been saved',
@@ -54,7 +54,7 @@ $('.app .sweetalert2-test-button').on('click', function () {
     });
 });
 
-$(function () {
+$(function() {
 
     var $jsTabs = $('.js-tabs');
     var $jsTabsLi = $('.js-tabs li');
@@ -67,7 +67,7 @@ $(function () {
 
 });
 
-$(function () {
+$(function() {
     var ACTIVE_SELECTOR = '.nav-tabs li';
 
     var $jsTabs = $('.js-tabs');
@@ -90,6 +90,7 @@ $(function () {
         tabManager($(ACTIVE_SELECTOR).find('.active').parent().next('li'));
         console.log('left')
     }
+
     function prev() {
         tabManager($(ACTIVE_SELECTOR).find('.active').parent().prev('li'));
         console.log('right');
@@ -101,6 +102,8 @@ $(function () {
 
         if ($nextTarget.index() != -1) {
             $scrollContainer.scrollLeft($nextTarget.index() * tabsLiWid);
+
+            $('.tab-page p')[0].innerHTML = $nextTarget[0].innerText;
         }
     }
 
