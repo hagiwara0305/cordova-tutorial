@@ -33,3 +33,5 @@ var done = function(err, status) {
 $('.qrscan-active').click(function() {
     QRScanner.prepare(done);
 });
+
+$('#qrcode').qrcode("Hello Cordova QRcode!!");
