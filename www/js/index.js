@@ -109,9 +109,9 @@ $(function() {
 
 });
 
-$(function() {
-    $('#tab7').click(function() {
-        $('.tab7').css('display', 'block');
-        $('.tab1').css('display', 'none');
-    });
-})
+// $(function() {
+//     $('#tab7').click(function() {
+//         $('.tab7').css('display', 'block');
+//         $('.tab1').css('display', 'none');
+//     });
+// })

@@ -23,27 +23,27 @@
 <body>
     <header>
         <div class="nav-tabs-outer">
-            <ul class="nav nav-tabs js-tabs">
-                <li class="text-center">
-                    <a class="nav-link active" href="#tab1" data-toggle="tab">TAB1</a>
+            <ul role="tablists" class="nav nav-tabs js-tabs">
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link active" href="#tab1" data-toggle="tab">TAB1</a>
                 </li>
-                <li class="text-center">
-                    <a class="nav-link" href="#tab2" data-toggle="tab">TAB2</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab2" data-toggle="tab">TAB2</a>
                 </li>
-                <li class="text-center">
-                    <a class="nav-link" href="#tab3" data-toggle="tab">TAB3</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab3" data-toggle="tab">TAB3</a>
                 </li>
-                <li class="text-center">
-                    <a class="nav-link" href="#tab4" data-toggle="tab">TAB4</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab4" data-toggle="tab">TAB4</a>
                 </li>
-                <li class="text-center">
-                    <a class="nav-link" href="#tab5" data-toggle="tab">TAB5</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab5" data-toggle="tab">TAB5</a>
                 </li>
-                <li class="text-center">
-                    <a class="nav-link" href="#tab6" data-toggle="tab">TAB6</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab6" data-toggle="tab">TAB6</a>
                 </li>
-                <li class="text-center">
-                    <a id="tab7" class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
+                <li class="text-center nav-item">
+                    <a role="tab" class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
                 </li>
             </ul>
         </div>
@@ -53,19 +53,21 @@
         <div class="tab-page">
             <p style="margin: 10px;">TAB1</p>
         </div>
-        <div class="app tab1">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div class="tab-content">
+            <div id="tab1" role="tabpanel" class="app tab-content tab-pane active fade show">
+                <h1>Apache Cordova</h1>
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Connecting to Device</p>
+                    <p class="event received">Device is Ready</p>
+                </div>
+
+                <button class="sweetalert2-test-button">on click!!</button>
             </div>
 
-            <button class="sweetalert2-test-button">on click!!</button>
-        </div>
-
-        <div class="app tab7" style="display: none;">
-            <h1>QRscanner</h1>
-            <button class="qrscan-active">Click!!</button>
+            <div id=tab7 role="tabpanel" class="app tab-content fade">
+                <h1>QRscanner</h1>
+                <button class="qrscan-active">Click!!</button>
+            </div>
         </div>
     </main>
 
