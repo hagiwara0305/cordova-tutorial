@@ -15,6 +15,7 @@
   "dependencies": {
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
+    "cordova-plugin-googlemaps": "^2.7.1",
     "cordova-plugin-qrscanner": "^3.0.1"
   },
   "devDependencies": {
@@ -23,7 +24,8 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-qrscanner": {}
+      "cordova-plugin-qrscanner": {},
+      "cordova-plugin-googlemaps": {}
     },
     "platforms": [
       "android",
