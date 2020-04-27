@@ -24,47 +24,26 @@
 <body>
     <header>
         <div class="nav-tabs-outer">
-            <ul role="tablists" class="nav nav-tabs js-tabs">
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link active" href="#tab1" data-toggle="tab">TAB1</a>
+            <ul id="myTab" class="nav nav-tabs js-tabs" role="tablist">
+                <li class="nav-item">
+                    <a href="#home" id="home-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="home" aria-selected="true">ホーム</a>
                 </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab2" data-toggle="tab">TAB2</a>
+                <li class="nav-item">
+                    <a href="#google-map" id="google-map-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="google-map" aria-selected="false">Google Map</a>
                 </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab3" data-toggle="tab">TAB3</a>
+                <li class="nav-item">
+                    <a href="#qrcode-generator" id="qrcode-generator-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="qrcode-generator" aria-selected="false">qrcode</a>
                 </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab4" data-toggle="tab">TAB4</a>
-                </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab5" data-toggle="tab">TAB5</a>
-                </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab6" data-toggle="tab">TAB6</a>
-                </li>
-                <li class="text-center nav-item">
-                    <a role="tab" class="nav-link" href="#tab7" data-toggle="tab">TAB7</a>
+                <li class="nav-item">
+                    <a href="#qrcode-scanner" id="qrcode-scanner-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="qrcode-scanner" aria-selected="false">scanner</a>
                 </li>
             </ul>
         </div>
     </header>
 
-    <main class="js-swipe" style="width: 100%; height: 100% - 40px;">
-        <div class="tab-page">
-            <p style="margin: 10px;">TAB1</p>
-        </div>
-        <div class="tab-content">
-            <div id="tab6" role="tabpanel" class="app tab-content fade">
-                <div id="qrcode"></div>
-            </div>
-
-            <div id=tab7 role="tabpanel" class="app tab-content fade">
-                <h1>QRscanner</h1>
-                <button class="qrscan-active">Click!!</button>
-            </div>
-
-            <div id="tab1" role="tabpanel" class="app tab-content tab-pane active fade show">
+    <main class="js-swipe" style="width: 100%; height: calc(100% - 40px - 16px);">
+        <div id="my-tab-content" class="tab-content mt-3 tab-page">
+            <div id="home" class="app tab-pane active fade show" role="tabpanel" aria-labelledby="home-tab">
                 <h1>Apache Cordova</h1>
                 <div id="deviceready" class="blink">
                     <p class="event listening">Connecting to Device</p>
@@ -74,10 +53,19 @@
                 <button class="sweetalert2-test-button">on click!!</button>
             </div>
 
-            <div id="tab5" role="tabpanel" class="app tab-content fade">
+            <div id="google-map" class="tab-pane tab-page fade" role="tabpanel" aria-labelledby="google-map-tab">
                 <h1>
                     <a href="googlemap.html">Google Maps</a>
                 </h1>
+            </div>
+
+            <div id="qrcode-generator" class="tab-pane tab-page fade" role="tabpanel" aria-labelledby="qrcode-generator-tab">
+                <div id="qrcode"></div>
+            </div>
+
+            <div id="qrcode-scanner" class="tab-pane tab-page fade" role="tabpanel" aria-labelledby="qrcode-scanner-tab">
+                <h1>QRscanner</h1>
+                <button class="qrscan-active">Click!!</button>
             </div>
         </div>
     </main>
